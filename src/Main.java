@@ -26,7 +26,6 @@ public class Main {
         double birthRate = (double) 17/1000;
         double deathRate = (double) 8/1000;
         int year = 1;
-        double total2 = 0.0;
         while (year < 11) {
             countryY = countryY + (birthRate*countryY) - (deathRate*countryY);
             System.out.printf("Год %d, численность населения составляет %.2f%n", year, countryY);
