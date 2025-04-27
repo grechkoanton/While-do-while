@@ -22,17 +22,14 @@ public class Main {
         }
         System.out.println();
         System.out.println("Task 3");
-        int countryY = 12_000_000;
-        double birthRate = (double) 17/1000 * countryY;
-        double deathRate = (double) 8/1000 * countryY;
-        double increasePeopleInYear = birthRate - deathRate;
-        int increasePeopleInYear2 = (int) increasePeopleInYear; //108000
-        int totalPeopleInYear = countryY + increasePeopleInYear2;
+        double countryY = 12_000_000.;
+        double birthRate = (double) 17/1000;
+        double deathRate = (double) 8/1000;
         int year = 1;
-        int total2 = 0;
+        double total2 = 0.0;
         while (year < 11) {
-            total2 = total2 + totalPeopleInYear;
-            System.out.println("Год " + year + " , численность населения составляет " + total2);
+            countryY = countryY + (birthRate*countryY) - (deathRate*countryY);
+            System.out.printf("Год %d, численность населения составляет %.2f%n", year, countryY);
             year++;
         }
         System.out.println("Task 4");
